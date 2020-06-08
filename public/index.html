@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Whiteboard with Sockets</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.css"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    </head>
+    <body>
+        <canvas class="whiteboard"></canvas>
+
+        <!-- <select class="stroke-size" name="strokeSize">
+            <option value="2">2</option>
+            <option value="4">4</option>
+            <option value="8">8</option>
+            <option value="12">12</option>
+            <option value="16">16</option>
+        </select> -->
+        <div class="custom-controls">
+            <label for="points">Pointer size</label>
+            <select id="stroke-size" name="strokeSize">
+                <option value="2">2</option>
+                <option value="4">4</option>
+                <option value="8">8</option>
+                <option value="12">12</option>
+                <option value="16">16</option>
+            </select>
+            <!-- <input
+                type="range"
+                id="stroke-size"
+                name="points"
+                min="2"
+                max="20"
+            /> -->
+        </div>
+
+        <div class="colors">
+            <p><b>FONT COLOR</b></p>
+            <div class="color black"></div>
+            <div class="color red"></div>
+            <div class="color green"></div>
+            <div class="color blue"></div>
+            <div class="color yellow"></div>
+            <div class="color white"></div>
+        </div>
+
+        <div class="board-colors">
+            <p><b>BOARD COLOR</b></p>
+            <div id="black" class="bgcolor black"></div>
+            <div id="red" class="bgcolor red"></div>
+            <div id="green" class="bgcolor green"></div>
+            <div id="blue" class="bgcolor blue"></div>
+            <div id="yellow" class="bgcolor yellow"></div>
+            <div id="white" class="bgcolor white"></div>
+        </div>
+
+        <div class="clear-button-div" style="z-index: 14;">
+            <button type="button" class="btn btn-danger clearCanvas btn-sm">
+                CLEAR
+            </button>
+
+            <button class="addText btn btn-primary btn-sm">
+                ADD TEXT
+            </button>
+        </div>
+
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/main.js"></script>
+    </body>
+</html>

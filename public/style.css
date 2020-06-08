@@ -1,0 +1,107 @@
+/**
+ * Fix user-agent
+ */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Calibri;
+}
+
+/**
+ * Canvas
+ */
+
+.whiteboard {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0%;
+    z-index: 1;
+    /* border-top: 160px solid #ddd; */
+    border-left: 10px solid #ddd;
+    border-right: 10px solid #ddd;
+    border-bottom: 10px solid #ddd;
+}
+.custom-controls {
+    height: 5%;
+    width: auto;
+    z-index: 10;
+    position: absolute;
+    margin: 3% auto 4% 10%;
+    top: 10%;
+}
+.active-boardColor,
+.active-fontColor {
+    border-radius: 10% !important;
+}
+
+.colors {
+    position: absolute;
+    z-index: 9;
+    float: left;
+    width: 50%;
+    height: 10%;
+    text-align: center;
+}
+
+.board-colors {
+    position: absolute;
+    right: 5%;
+    z-index: 10;
+    float: left;
+    width: 50%;
+    height: 10%;
+    text-align: center;
+}
+
+.bgcolor,
+.color {
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    padding: 5%;
+    border-radius: 56%;
+    margin: 0%;
+    border: 2px solid #ddd;
+}
+
+.bgcolor.black,
+.color.black {
+    background-color: black;
+}
+.bgcolor.red,
+.color.red {
+    background-color: red;
+}
+.bgcolor.green,
+.color.green {
+    background-color: green;
+}
+.bgcolor.blue,
+.color.blue {
+    background-color: blue;
+}
+.bgcolor.yellow,
+.color.yellow {
+    background-color: goldenrod;
+}
+.bgcolor.white,
+.color.white {
+    background-color: white;
+}
+.clear-button-div {
+    z-index: 14;
+    position: absolute;
+    top: 13%;
+    left: 43%;
+}
